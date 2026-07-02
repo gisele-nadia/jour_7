@@ -52,6 +52,7 @@ a:hover{
     font-weight: 500;
     display: flex;
     margin-bottom: 15px;
+    color: red;
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
