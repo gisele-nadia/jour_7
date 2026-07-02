@@ -1,0 +1,70 @@
+
+ <div class="modal-product-view-overlay" (click)="onCloseClick()">
+     
+</div>
+
+<div class="modal-product-view-container container-fluid row" style="max-width: 400px; margin: auto;">
+    <div class="modal-product-view-image row g-3 align-items-center text-center">
+        <img [src]="product()?.imageUrl"
+         [alt]="product()?.name">
+    </div>
+
+    <div class="modal-product-view-details">
+        <h2 class="h5 fw-bold mb-1 text-dark">{{ product()?.name}}</h2>
+        <p class="text-muted small mb-2">{{product()?.description}}</p>
+        <h4 class="text-primary fw-bold">prix solde:  {{product()?.soldPrice}} FCFA</h4>
+        <h4 class="text-secondary "> prix normale: {{product()?.regularPrice}} FCFA</h4>
+        <p>cree le {{product()?.createAt|date:'dd/MM/yyyy'}}</p>
+        <button class="btn btn-primary d-flex flex-column gap-1 align-items-end" (click)="onAddToFavorites()"> Ajouter aus favoris </button>
+        <button class="btn btn-dark btn-sm" id="button" (click)="onCloseClick()"> fermer</button>
+    </div>
+ 
+</div>
+
+
+<!-- <div class="modal-product-view-overlay" (click)="onCloseClick()">
+     
+</div> -->
+<!-- Conteneur principal (Ajustez la largeur max pour éviter qu'il ne soit trop grand) -->
+<!-- <div class="modal-product-view-container container bg-white rounded shadow" style="max-width: 400px; margin: auto;"> -->
+  
+  <!-- "row" force l'alignement horizontal, "g-3" gère l'espace entre image et texte -->
+  <!-- <div class="row g-3 align-items-center"> -->
+    
+    <!-- Partie Image : Prend 5 colonnes sur 12, même sur mobile (col-5) -->
+    <!-- <div class="col-5">
+      <div class="modal-product-view-image text-center">
+        <img [src]="product()?.imageUrl" 
+             [alt]="product()?.name" 
+             class="img-fluid rounded">
+      </div>
+    </div> -->
+
+    <!-- Partie Détails : Prend le reste de l'espace (col-7) -->
+    <!-- <div class="col-7">
+      <div class="modal-product-view-details">
+        <h2 class="h5 fw-bold mb-1 text-dark">{{ product()?.name }}</h2>
+        <p class="text-muted small mb-2" style="font-size: 0.8rem;">{{ product()?.description }}</p>
+        
+        <div class="price-section mb-2" style="font-size: 0.85rem;">
+          <div class="text-primary fw-bold">prix solde: {{ product()?.soldPrice }} FCFA</div>
+          <div class="text-secondary text-decoration-line-through">prix normale: {{ product()?.regularPrice }} FCFA</div>
+        </div>
+
+        <p class="text-muted mb-2" style="font-size: 0.75rem;">créé le {{ product()?.createAt| date: 'dd/MM/yyyy' }}</p> -->
+
+        <!-- Zone des boutons alignés à droite -->
+        <!-- <div class="d-flex flex-column gap-1 align-items-end">
+          <button class="btn btn-primary btn-sm w-100" style="font-size: 0.75rem;" (click)="onAddToFavorites()">
+            Ajouter aux favoris
+          </button>
+          <button class="btn btn-dark btn-sm" style="font-size: 0.75rem; padding: 2px 8px;" (click)="onCloseClick()">
+            fermer
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+

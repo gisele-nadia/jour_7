@@ -1,0 +1,29 @@
+<div class="product-list">
+    @for(product of products();track product.id){
+        <app-product-item
+          [product]="product"
+        (displayProductViewModal)="onDisplayProductViewModal($event)">
+        </app-product-item>
+    }
+</div>
+<!-- @if(isDisplayModal()&& modalProduct()){
+    <app-modal-product-view
+    [product]="modalProduct()"
+    (close)="onCloseModal()"
+    >
+    </app-modal-product-view>
+
+} -->
+
+@if (isDisplayModal() && modalProduct(); as product) {
+  <app-modal-product-view
+   [product]="product"
+    (close)="onCloseModal()"
+    (favoriteAdded)="onFavoriteAdded($event)"
+    >
+  </app-modal-product-view>
+}
+
+
+
+

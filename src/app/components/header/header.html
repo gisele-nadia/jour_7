@@ -1,0 +1,22 @@
+<header> 
+  <div class="logo"> 
+    <a href="#">Shop</a> 
+  </div> 
+  <button class="burger" (click)="toggleMenu()">☰</button>
+  
+  <nav class="navbar" [class.active]="isMenuOpen"> 
+    <ul> 
+      <li><a href="#">Home</a></li> 
+      <li><a href="#">Products</a></li> 
+      <li><a href="#">Blog</a></li> 
+      <li><a href="#">Contact</a></li> 
+    </ul>
+    <div class="favorites"> 
+    ❤ {{ favoritesCount() }} favoris 
+    </div>  
+  </nav> 
+
+  <!-- <div class="favorites"> 
+    ❤ {{ favoritesCount() }} favoris 
+  </div>  -->
+</header> 

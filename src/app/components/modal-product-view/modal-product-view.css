@@ -1,0 +1,49 @@
+/* l'overlay - fond sombre semi-transparent */
+.modal-product-view-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 99;
+}
+
+
+
+/* le container - la boite centree */
+.modal-product-view-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:650px;
+    height: 400px;
+    background-color: white;
+    z-index: 100;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.modal-product-view-image{
+    flex: 1;
+}
+.modal-product-view-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .modal-product-view-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+#button{
+ width: 100px;
+} 
