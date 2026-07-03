@@ -25,6 +25,7 @@ export class ModalProductView {
     const p = this.product();
     if(p){
       this.favoriteAdded.emit(p);
+      this.close.emit();
     }else{
       console.log('ce produit est deja en favorie')
     }
