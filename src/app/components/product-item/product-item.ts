@@ -1,4 +1,4 @@
-import { Component, input , output} from '@angular/core';
+import { Component, input , output, signal} from '@angular/core';
 import { Product } from '../../models/product';
 
 @Component({
@@ -18,10 +18,15 @@ export class ProductItem {
   //output qui emet un signal vers le parent qu on a clique
   displayProductViewModal=output<Product>();
 
+
   //methode qui emet l'evenement
+  //  isMenuOpen = signal(true);
+
   onProductClick(){
-    this.displayProductViewModal.emit(this.product());
+       this.displayProductViewModal.emit(this.product());
+    //  this.isMenuOpen.set( false);
   }
+ 
   // onProductClick(product:Product){
   //   this.productCliked.emit(product);
   // }

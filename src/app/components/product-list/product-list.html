@@ -4,8 +4,18 @@
           [product]="product"
         (displayProductViewModal)="onDisplayProductViewModal($event)">
         </app-product-item>
+<!-- 
+        @for(favorite of favorites(); track favorite.id){
+          <app-product-item
+          [favorite]="favorite"
+          >
+          </app-product-item>
+        } -->
     }
 </div>
+
+
+
 <!-- @if(isDisplayModal()&& modalProduct()){
     <app-modal-product-view
     [product]="modalProduct()"
@@ -14,6 +24,8 @@
     </app-modal-product-view>
 
 } -->
+
+
 
 @if (isDisplayModal() && modalProduct(); as product) {
   <app-modal-product-view

@@ -21,13 +21,10 @@ export class ModalProductView {
   //nouveau output: ajout aux favorites
   favoriteAdded= output<Product>();
 
-  onAddToFavorites(){
+   onAddToFavorites(){
     const p = this.product();
-    if(p){
-      this.favoriteAdded.emit(p);
-      this.close.emit();
-    }else{
-      console.log('ce produit est deja en favorie')
-    }
-  }
+    this.favoriteAdded.emit(p);
+    this.close.emit();
+
+   }
 }

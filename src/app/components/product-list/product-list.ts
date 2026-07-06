@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, input } from '@angular/core';
 import { signal } from '@angular/core';
 import { ProductItem } from "../product-item/product-item";
 import { Product } from '../../models/product';
@@ -82,10 +82,12 @@ export class ProductList {
   isDisplayModal = signal(false);
   modalProduct = signal<Product| undefined>(undefined);
 
+
   // methode appele lorsque le produit est cliquer
     onDisplayProductViewModal(product:Product){
       this.modalProduct.set(product);
       this.isDisplayModal.set(true);
+
       // console.log('produit clique:',product);
       //faire quelque chose avec le produit
     }
@@ -98,6 +100,8 @@ export class ProductList {
   
    //nouveaux  output: retransmet vers app
    favoriteAdded=output<Product>();
+
+
     
    //methode appelee quand le modal ajoute aux favoris
    onFavoriteAdded(product:Product){

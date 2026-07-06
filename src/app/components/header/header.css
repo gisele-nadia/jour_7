@@ -8,6 +8,7 @@ header{
     box-sizing: border-box;
     flex-wrap: wrap;
 
+
 }
 .logo{
     font-size: 30px;
@@ -27,7 +28,7 @@ li{
 a{
     text-decoration: none;
 }
-a:hover{
+li a:hover{
     color: white;
     background-color: rgb(6, 118, 255);
     padding: 8px;

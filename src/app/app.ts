@@ -25,6 +25,8 @@ export class App {
     const exists=this.favorites().some(p=>p.id === product.id);
     if (exists){
       console.log('ce produit est deja en favori');
+      // alert('ce produit est deja en favori');
+      
       return;
     }
 
